@@ -41,6 +41,7 @@ const HomeScreen = () => {
           return <Card data={item} />;
         }}
         style={{ marginBottom: windowHeight / 6 }}
+        showsVerticalScrollIndicator={false}
       />
     </Screen>
   );

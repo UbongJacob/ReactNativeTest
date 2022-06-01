@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native';
+
 import colors from '../../config/colors';
 import CardContent from './CardContent';
 import CardImages from './CardImages';

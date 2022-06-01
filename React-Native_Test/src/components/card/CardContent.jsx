@@ -1,11 +1,14 @@
 import { View, StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 import AppButton from '../AppButton';
 import colors from '../../config/colors';
 import AppText from '../AppText';
 
 const CardContent = ({ data }) => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -19,7 +22,7 @@ const CardContent = ({ data }) => {
       <AppButton
         title={'Book'}
         buttonStyles={styles.button}
-        onPress={() => console.warn('ButtonPressed')}
+        onPress={() => navigation.navigate('Details')}
       />
 
       <View style={styles.reviews}>

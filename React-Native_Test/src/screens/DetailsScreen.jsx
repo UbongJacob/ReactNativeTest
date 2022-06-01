@@ -101,7 +101,6 @@ const DetailsScreen = () => {
           return <Details data={item} />;
         }}
       />
-      <Details />
     </Screen>
   );
 };

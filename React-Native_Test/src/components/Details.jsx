@@ -1,11 +1,13 @@
 import { StyleSheet, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 import AppText from './AppText';
 import colors from '../config/colors';
 import AppButton from './AppButton';
 
 const Details = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.serviceContainer}>
@@ -24,7 +26,7 @@ const Details = () => {
       <AppButton
         title={'Book'}
         buttonStyles={styles.button}
-        onPress={() => console.warn('ButtonPressed')}
+        onPress={() => navigation.goBack()}
       />
 
       <View style={styles.priceContaniner}>
