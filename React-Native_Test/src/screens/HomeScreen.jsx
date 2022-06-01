@@ -9,14 +9,18 @@ import colors from '../config/colors';
 import Card from '../components/card/Card';
 import dummyData from '../assets/dummyData';
 
-const Home = () => {
+const HomeScreen = () => {
   const windowHeight = useWindowDimensions().height;
 
   return (
     <Screen style={styles.container}>
       <View style={styles.headerContainer}>
         <AppText style={styles.text}>Hello, Abu!</AppText>
-        <AppButton title='My booking' buttonStyles={styles.button} />
+        <AppButton
+          title='My booking'
+          buttonStyles={styles.button}
+          onPress={() => console.warn('ButtonPressed')}
+        />
       </View>
 
       <View style={styles.searchContainer}>
@@ -89,4 +93,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default HomeScreen;

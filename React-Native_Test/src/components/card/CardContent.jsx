@@ -16,7 +16,11 @@ const CardContent = ({ data }) => {
         <AppText style={styles.price}>Rs. {data.price}</AppText>
       </View>
 
-      <AppButton title={'Book'} buttonStyles={styles.button} />
+      <AppButton
+        title={'Book'}
+        buttonStyles={styles.button}
+        onPress={() => console.warn('ButtonPressed')}
+      />
 
       <View style={styles.reviews}>
         <View>
